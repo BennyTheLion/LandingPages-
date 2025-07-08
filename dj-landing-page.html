@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ ארז גולד - DJ מקצועי לחתונות ואירועים | 30 שנות ניסיון</title>
+    <meta name="description" content="DJ מקצועי לחתונות ואירועים עם ניסיון של 30 שנה. התמחות בכל סגנונות המוזיקה. DJ ארז גולד - ההופעה שלכם, החלום שלנו.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Assistant:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Heebo', 'Assistant', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            direction: rtl;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4ecdc4;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('dj-hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            color: #f8f9fa;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-content .description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: #333;
+            transform: translateY(-2px);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .services-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .services-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-method i {
+            font-size: 1.5rem;
+            color: #4ecdc4;
+        }
+
+        .contact-method a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #4ecdc4;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">DJ ארז גולד</a>
+            <ul class="nav-links">
+                <li><a href="#about">אודות</a></li>
+                <li><a href="#services">שירותים</a></li>
+                <li><a href="#contact">יצירת קשר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>DJ מקצועי לחתונות, אירועים וחגיגות</h1>
+                <p class="subtitle">עם ניסיון של 30 שנה על העמדה</p>
+                <p class="description">
+                    מחפש DJ שירקיד את הקהל בלי הפסקה ויבין בדיוק מה אתם רוצים לשמוע?<br>
+                    נעים להכיר – אני DJ עם ניסיון של מעל 30 שנה, מתמחה בכל סגנונות המוזיקה
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        בואו נתחיל!
+                    </a>
+                    <a href="https://wa.me/972522648094" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        וואטסאפ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about scroll-reveal" id="about">
+        <div class="container">
+            <h2 class="section-title">למה לבחור בי?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>עם התמחות מיוחדת בסטים מעורבים של מיינסטרים, קלאסיקות, מזרחית, לועזית, אלקטרונית, ישראלית ועוד – בהתאמה מלאה לאופי הקהל ולרצון הלקוח.</p>
+                    
+                    <p>כל אירוע הוא עולם בפני עצמו, ואני כאן כדי לדייק אותו – מהשיר הראשון ועד השיר האחרון.</p>
+                    
+                    <p><strong>הקהל לא מפסיק לרקוד – ואתם לא מפסיקים לחייך.</strong></p>
+                    
+                    <p>בואו נבנה יחד את הפלייליסט הכי טוב של החיים שלכם.</p>
+                </div>
+                <div class="about-image">
+                    <img src="dj-image.jpg" alt="DJ ארז גולד" style="max-width: 400px; height: 400px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">מה אני מביא לאירוע שלכם?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="feature-title">ניסיון עשיר בכל סוגי האירועים</h3>
+                    <p>30 שנות ניסיון בתחום, עבודה עם מגוון רחב של לקוחות ואירועים</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="feature-title">התאמה אישית לכל זוג וקהל</h3>
+                    <p>הבנה עמוקה של הצרכים האישיים ויצירת חוויה מותאמת אישית</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="feature-title">שליטה רחבה במוזיקה מכל הזמנים</h3>
+                    <p>ידע מוזיקלי עשיר בכל הסגנונות - מקלאסיקות ועד החדשות ביותר</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="feature-title">אנרגיה ומקצועיות</h3>
+                    <p>אהבה אמיתית למוזיקה ולרגעים שלכם, עם גישה מקצועית ברמה הגבוהה ביותר</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services scroll-reveal" id="services">
+        <div class="container">
+            <div class="services-content">
+                <h2 class="section-title">השירות שלי</h2>
+                <h3>DJ מקצועי לחתונות, אירועים וחגיגות</h3>
+                <p>אני מציע שירות מקצועי ומותאם אישית לכל סוג אירוע. עם ציוד מתקדם, מערכת הגברה איכותית, ותכנון מוזיקלי מדויק שיבטיח שהקהל שלכם יהיה על הרחבה כל הערב.</p>
+                
+                <p>השירות כולל התייעצות מוקדמת, הכנת פלייליסט מותאם, הגעה מוקדמת להתקנה, וליווי מקצועי לאורך כל האירוע.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact scroll-reveal" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>בואו ניצור קשר!</h3>
+                    <p>מוכנים לתכנן את האירוע המושלם? אני כאן בשבילכם!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+972522648094">052-2648094</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/972522648094" target="_blank">שלחו הודעה בוואטסאפ</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-facebook"></i>
+                            <a href="https://www.facebook.com/share/19CKXU9HWC/" target="_blank">עמוד הפייסבוק</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/djerezgold?utm_source=qr&igsh=MWx3ODAwYmJ1Mno2dg==" target="_blank">עקבו באינסטגרם</a>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/19CKXU9HWC/" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/djerezgold?utm_source=qr&igsh=MWx3ODAwYmJ1Mno2dg==" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/972522648094" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+972522648094" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>שלחו לי הודעה</h3>
+                    <form class="contact-form-element">
+                        <div class="form-group">
+                            <input type="text" placeholder="שם מלא" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="טלפון" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" placeholder="תאריך האירוע">
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option>סוג האירוע</option>
+                                <option>חתונה</option>
+                                <option>בר/בת מצווה</option>
+                                <option>יום הולדת</option>
+                                <option>אירוע חברה</option>
+                                <option>אחר</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="פרטים נוספים" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">שלח הודעה</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 DJ ארז גולד. כל הזכויות שמורות.</p>
+            <p>אתר מקצועי לשירותי DJ - חתונות, אירועים וחגיגות</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll reveal animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('revealed');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', reveal);
+
+        // Form submission handler
+        document.querySelector('.contact-form-element').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('תודה על ההודעה! אחזור אליכם בהקדם.');
+        });
+    </script>
+
+    <style>
+        /* Contact Form Styles */
+        .contact-form h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4ecdc4;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-form .btn {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    </style>
+</body>
+</html>
